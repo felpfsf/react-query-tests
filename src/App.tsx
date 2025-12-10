@@ -1,4 +1,5 @@
 import './App.css';
+import { MutationExamples } from './examples/MutationExamples';
 import { useProductQuery } from './hooks/useProductQuery';
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
     return (
       <div className="error-container">
         <h2>Erro ao carregar produtos</h2>
-        <p>{error?.message ?? "Erro desconhecido"}</p>
+        <p>{error?.message ?? 'Erro desconhecido'}</p>
       </div>
     );
   }
@@ -29,7 +30,7 @@ function App() {
         <p className="subtitle">Encontrados {data?.products.length} produtos incríveis para você</p>
       </header>
 
-      <section className="products-grid">
+      {/* <section className="products-grid">
         {data?.products.map((product) => (
           <article key={product.id} className="product-card">
             <div className="image-container">
@@ -44,7 +45,8 @@ function App() {
             </div>
           </article>
         ))}
-      </section>
+      </section> */}
+      <MutationExamples />
     </main>
   );
 }

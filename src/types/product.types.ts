@@ -28,3 +28,20 @@ export interface ProductQueryParams {
   skip?: number;
   select?: string[];
 }
+
+export interface CreateProductDto {
+  title: string;
+  description?: string;
+  price: number;
+  discountPercentage?: number;
+  rating?: number;
+  stock?: number;
+  brand?: string;
+  category?: string;
+  thumbnail: string;
+  images?: string[];
+}
+
+export interface UpdateProductDto extends Partial<CreateProductDto> {
+  id: number;
+}

@@ -1,73 +1,77 @@
-# React + TypeScript + Vite
+# Projeto de Estudo: React Query com TypeScript e Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto foi criado para praticar e explorar o uso do React Query em conjunto com React, TypeScript e Vite. Ele serve como um ambiente de aprendizado para entender como gerenciar estados assíncronos de forma eficiente em aplicações React.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: Biblioteca para construção de interfaces de usuário.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática ao código.
+- **Vite**: Ferramenta de build rápida e moderna para projetos web.
+- **React Query**: Biblioteca para gerenciamento de estados assíncronos e cache de dados.
 
-## React Compiler
+## Objetivo do Projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O objetivo principal deste projeto é:
 
-## Expanding the ESLint configuration
+- Praticar o uso do React Query para gerenciar chamadas assíncronas à API.
+- Entender como configurar e utilizar o React Query em um projeto TypeScript.
+- Explorar boas práticas para lidar com estados assíncronos em aplicações React.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Estrutura do Projeto
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+A estrutura do projeto está organizada da seguinte forma:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```plaintext
+public/
+src/
+  App.css
+  App.tsx
+  index.css
+  main.tsx
+  assets/
+  config/
+    api.config.ts
+  hooks/
+    useProductQuery.ts
+  lib/
+    http-client.ts
+    utils.ts
+  services/
+    product.service.ts
+  types/
+    product.types.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Como Executar o Projeto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Clone o repositório:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+   ```bash
+   git clone https://github.com/felpfsf/react-query-tests.git
+   ```
+
+2. Navegue até o diretório do projeto:
+
+   ```bash
+   cd react-query-tests
+   ```
+
+3. Instale as dependências:
+
+   ```bash
+   pnpm install
+   ```
+
+4. Inicie o servidor de desenvolvimento:
+
+   ```bash
+   pnpm dev
+   ```
+
+5. Acesse o projeto no navegador em `http://localhost:5173`.
+
+## Próximos Passos
+
+- Adicionar exemplos práticos de uso do React Query.
+- Implementar testes para os hooks e serviços criados.
+- Explorar mais funcionalidades avançadas do React Query, como invalidation e otimizações de cache.

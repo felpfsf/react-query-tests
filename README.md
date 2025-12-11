@@ -1,8 +1,8 @@
-# 🚀 Projeto de Estudo: React Query com TypeScript e Vite
+# Projeto de Estudo: React Query com TypeScript e Vite
 
 Este projeto foi criado para praticar e explorar o uso do **React Query (TanStack Query)** em conjunto com React, TypeScript e Vite, seguindo **boas práticas modernas** de arquitetura e padrões de projeto.
 
-## 📚 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **React 18+**: Biblioteca para construção de interfaces de usuário
 - **TypeScript**: Superset do JavaScript com tipagem estática
@@ -11,19 +11,7 @@ Este projeto foi criado para praticar e explorar o uso do **React Query (TanStac
 - **Axios**: Cliente HTTP para requisições
 - **DummyJSON API**: API de teste para simulação de dados
 
-## 🎯 Objetivo do Projeto
-
-O objetivo principal deste projeto é demonstrar:
-
-- ✅ Uso avançado do React Query (queries, mutations, cache)
-- ✅ Arquitetura em camadas (Adapter Pattern)
-- ✅ Separação de responsabilidades (Services, Hooks, Types)
-- ✅ Invalidação inteligente de cache
-- ✅ Optimistic Updates
-- ✅ Boas práticas de TypeScript e React
-- ✅ Gerenciamento eficiente de estados assíncronos
-
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```plaintext
 src/
@@ -47,16 +35,16 @@ src/
 └── main.tsx                  # Entry point da aplicação
 ```
 
-## 🏗️ Arquitetura e Padrões
+## Arquitetura e Padrões
 
 ### **1. Adapter Pattern** (`lib/http-client.ts`)
 
 Encapsula o Axios em uma interface própria, facilitando:
 
-- 🔄 Troca de biblioteca HTTP sem afetar o código
-- 🧪 Testes isolados
-- 🛡️ Tratamento global de erros
-- 📦 Singleton para instância única
+- Troca de biblioteca HTTP sem afetar o código
+- Testes isolados
+- Tratamento global de erros
+- Singleton para instância única
 
 ```typescript
 // Exemplo de uso
@@ -67,10 +55,10 @@ const data = await httpClient.get<Product[]>('/products');
 
 Centraliza toda a lógica de comunicação com a API:
 
-- 📡 CRUD completo (Create, Read, Update, Delete)
-- 🎯 Métodos semânticos e auto-documentados
-- 🔒 Type-safe com TypeScript
-- 🧩 Reutilizável em toda aplicação
+- CRUD completo (Create, Read, Update, Delete)
+- Métodos semânticos e auto-documentados
+- Type-safe com TypeScript
+- Reutilizável em toda aplicação
 
 ```typescript
 // Exemplo
@@ -81,20 +69,20 @@ const products = await productService.getAllProducts({ limit: 10 });
 
 Abstrai a complexidade do React Query:
 
-- 🪝 **useProductQuery**: Para buscar dados (GET)
-- 🔧 **useCreateProduct**: Para criar produtos
-- ✏️ **useUpdateProduct**: Para atualizar produtos
-- 🗑️ **useDeleteProduct**: Para deletar produtos
-- ⚡ **useUpdateProductOptimistic**: Atualização otimista
+- **useProductQuery**: Para buscar dados (GET)
+- **useCreateProduct**: Para criar produtos
+- **useUpdateProduct**: Para atualizar produtos
+- **useDeleteProduct**: Para deletar produtos
+- **useUpdateProductOptimistic**: Atualização otimista
 
 ### **4. Configurações Centralizadas** (`config/api.config.ts`)
 
-- 🌐 URLs base da API
-- 🔗 Endpoints organizados
-- 🔑 Query keys padronizadas
-- ⚙️ Configurações de cache
+- URLs base da API
+- Endpoints organizados
+- Query keys padronizadas
+- Configurações de cache
 
-## 🎨 Funcionalidades Implementadas
+## Funcionalidades Implementadas
 
 ### **Queries (Busca de Dados)**
 
@@ -167,7 +155,7 @@ queryClient.setQueriesData({ queryKey: QUERY_KEYS.PRODUCTS }, newData);
 queryClient.removeQueries({ queryKey: QUERY_KEYS.PRODUCT(id) });
 ```
 
-## 🚀 Como Executar o Projeto
+## Como Executar o Projeto
 
 ### Pré-requisitos
 
